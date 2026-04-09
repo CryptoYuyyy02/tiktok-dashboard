@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTY
+            animation:false,PE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -211,7 +212,7 @@
         });
         return ()=>{ if(trendChart){ trendChart.destroy(); trendChart=null; } };
       }, [data]);
-      return <canvas ref={ref} style={{height:160}}/>;
+      return <canvas ref={ref} style={{height:130}}/>;
     };
 
     const VideoBarChart = ({ videos, containerId }) => {
@@ -229,6 +230,7 @@
             ]
           },
           options:{
+            animation:false,
             responsive:true,
             maintainAspectRatio:false,
             plugins:{ legend:{ labels:{ color:'rgba(255,255,255,0.6)', font:{size:11}, boxWidth:10 } } },
@@ -240,7 +242,7 @@
         });
         return ()=>{ if(barChart){ barChart.destroy(); barChart=null; } };
       }, [videos]);
-      return <canvas ref={ref} style={{height:200}}/>;
+      return <canvas ref={ref} style={{height:160}}/>;
     };
 
     // ── Main App ──
